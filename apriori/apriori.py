@@ -3,6 +3,15 @@
 
 def loadDataSet() :
     return [[1, 3, 4], [2, 3, 5], [1, 2, 3, 5], [2, 5]]
+"""
+    simpDat = [['r', 'z', 'h', 'j', 'p'],
+                   ['z', 'y', 'x', 'w', 'v', 'u', 't', 's'],
+                   ['z'],
+                   ['r', 'x', 'n', 'o', 's'],
+                   ['y', 'r', 'x', 'z', 'q', 't', 'p'],
+                   ['y', 'z', 'x', 'e', 'q', 's', 't', 'm']]    
+    return simpDat
+    """
 
 #生成初始的候选项集
 def createC1(dataset) :
@@ -14,6 +23,8 @@ def createC1(dataset) :
     C1.sort()
     # 对C1中每个项构建一个不变的集合,frozenset用户不能被修改
     return map(frozenset, C1)
+
+
 
 #输入候选项集，返回频繁项集
 def scanD(D, Ck, minSupport) :
